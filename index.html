@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mining Dashboard (Darkmode)</title>
+    <style>
+        
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1e1e1e;
+        color: #f4f4f4;
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #f4f4f4;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        background-color: #2c2c2c;
+        color: #f4f4f4;
+    }
+    th, td {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #444;
+    }
+    th {
+        background-color: #3a3a3a;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+    .calc-box {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #2c2c2c;
+        border: 1px solid #555;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Mining Dashboard</h1>
+    <p>Live-Datenübersicht deiner Bitaxe Worker auf Solo CKPool.</p>
+
+    <h2>Hashrate Verlauf (letzte 24 Stunden)</h2>
+    <img src="hashrate_plot.png" alt="Hashrate Verlauf">
+
+    <h2>Übersicht pro Worker</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Worker</th>
+      <th>1m Hashrate (TH/s)</th>
+      <th>5m Hashrate (TH/s)</th>
+      <th>1h Hashrate (TH/s)</th>
+      <th>1d Hashrate (GH/s)</th>
+      <th>7d Hashrate (GH/s)</th>
+      <th>Shares</th>
+      <th>Best Share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bitaxe01</td>
+      <td>1.25</td>
+      <td>1.18</td>
+      <td>1.10</td>
+      <td>984</td>
+      <td>336</td>
+      <td>57057539</td>
+      <td>139121303.56</td>
+    </tr>
+    <tr>
+      <td>bitaxe02</td>
+      <td>1.23</td>
+      <td>1.12</td>
+      <td>1.10</td>
+      <td>994</td>
+      <td>325</td>
+      <td>54403275</td>
+      <td>78717110.18</td>
+    </tr>
+    <tr>
+      <td>bitaxe03</td>
+      <td>1.25</td>
+      <td>1.14</td>
+      <td>1.07</td>
+      <td>974</td>
+      <td>310</td>
+      <td>51594279</td>
+      <td>51985150.25</td>
+    </tr>
+  </tbody>
+</table>
+
+    <div class="calc-box">
+        <h2>Wahrscheinlichkeit Block zu finden (pro Tag)</h2>
+        <p>Gesamte aktuelle Hashrate: <strong>3,27 TH/s</strong></p>
+        <p><strong>Automatisch berechnete Wahrscheinlichkeit pro Tag: 0.078449 %</strong></p>
+        <p>Die Berechnung basiert auf einer geschätzten Netzwerk-Hashrate von 600 EH/s und 144 Blöcken pro Tag.</p>
+    </div>
+</body>
+</html>
